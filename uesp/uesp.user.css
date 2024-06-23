@@ -1,0 +1,244 @@
+/* ==UserStyle==
+@name           [snk] uesp
+@namespace      snake <terrybogard.gay>
+@version        2.0
+@license        GPL-3.0-or-later
+@preprocessor   stylus
+
+@var select theme "theme" ["custom*","nord","dracula"]
+@var color colorBG1 "bg 1" #1b1820
+@var color colorBG2 "bg 2" #282A3A
+@var color colorBG3 "bg 3" #303347
+@var color colorBG4 "bg 4 (mostly borders)" #3b3e53
+@var color colorTXT1 "text" #cdcdb8
+@var color colorTXT2 "text 2" #f2f0eb
+@var color colorTXT3 "text 3" #f2f0eb
+@var color colorACC "accent" #C69749
+@var color colorRed "red" #e16161
+==/UserStyle== */
+@-moz-document domain("uesp.net") {
+  
+  if theme == custom {
+    :root {
+      --bg1:colorBG1;
+      --bg2:colorBG2;
+      --bg3:colorBG3;
+      --bg4:colorBG4;
+      --txt1:colorTXT1;
+      --txt2:colorTXT2;
+      --txt3:colorTXT3;
+      --red:colorRed;
+      --accent:colorACC;
+    }
+  }
+
+  if theme == nord {
+    :root {
+      --bg1:#2e3440;
+      --bg2:#3b4252;
+      --bg3:#434c5e;
+      --bg4:#4c566a;
+      --txt1:#d8dee9;
+      --txt2:#e5e9f0;
+      --txt3:#eceff4;
+      --red:#bf616a;
+      --orange:#d08770;
+      --yellow:#ebcb8b;
+      --green:#a3be8c;
+      --blue:#81a1c1;
+      --purple:#b48ead;
+      --accent:var(--blue);
+    }
+  }
+  
+  if theme == dracula {
+    :root {
+      --bg1:#282a36;
+      --bg2:#44475a;
+      --bg3:#535568;
+      --bg4:#67697d;
+      --txt1:#f8f8f2;
+      --txt2:#dbe1d4;
+      --txt3:#999f93;
+      --red:#ff5555;
+      --orange:#ffb86c;
+      --yellow:#f1fa8c;
+      --green:#50fa7b;
+      --blue:#8be9fd;
+      --purple:#bd93f9;
+      --accent:var(--purple);
+    }
+  }
+  
+  /* basic */
+ 
+  body {
+    color:var(--txt1);
+    background:var(--bg1);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color:var(--txt2);
+    font-weight:bold;
+    border-color:var(--bg4);
+  }
+  
+  code {
+    color:var(--accent);
+    background:var(--bg4);
+    border-color:var(--bg4);
+  }
+  
+  table {
+    background:var(--bg3);
+  }
+  
+  hr {
+    margin:1rem 0;
+    color:var(--bg4);
+    border-color:var(--bg4);
+    background:var(--bg4); }
+  
+  /* links */
+  
+  a, a:visited, #bodyContent a.external, a.external[href^="https://"], .link-https, #bodyContent a.extiw, #bodyContent a.extiw:active {
+    color:var(--accent);
+  }
+  
+  a.new, #p-personal a.new, #p-cactions .new a {
+    color:var(--red);
+  }
+  
+  #bodyContent a.external, a.external[href^="https://"], .link-https, #bodyContent a.extiw, #bodyContent a.extiw:active {
+    font-weight:bold;
+  }
+  #bodyContent a.external:after {
+    content:'➶';
+  }
+  
+  /* containers */
+  
+  div.pBody, div#content, div#footer {
+    color:var(--txt1);
+    line-height:1.5;
+    background:var(--bg2);
+    border-color:var(--bg4);
+  }
+  
+  table.notice-default, table.hiddentable {
+    background:var(--bg3)!important;
+    border-color:var(--bg4)!important;
+  }
+  
+  .mw-body-content {
+    font-size:1rem;
+    line-height:1.7;
+  }
+  
+  .toc, #toc, #catlinks, #filetoc {
+    background:var(--bg3);
+    border-color:var(--bg3);
+  }
+  
+  .tocnumber {
+    color:var(--txt1);
+  }
+  
+  .quotebox {
+    background:var(--bg3);
+    border-color:var(--bg4);
+  }
+  
+  table.wikitable,
+  table.wikitable > * > tr > td {
+    color:var(--txt1);
+    background:var(--bg3);
+    border-color:var(--bg4);
+  }
+
+  table.wikitable > tr > th,
+  table.wikitable > * > tr > th {
+    background:var(--bg4);
+    border-color:var(--bg3);
+  }
+  
+  table.attColor th,
+  tr.attColor th,
+  tr.attColor td,
+  th.attColor,
+  td.attColor,
+  .navbox-even {
+    background:var(--bg2);
+  }
+  
+  div.quotebox {
+    background:var(--bg3);
+    border-color:var(--accent);
+  }
+  
+  .citation:target, .citation:target td { background:var(--bg3); }
+    
+  .navbox { border-color:var(--bg4); }
+  .navbox, .navbox-subgroup { background:var(--bg3); }
+  .navbox-title, .navbox-group { background:var(--bg2); }
+  .navbox-list { border-color:var(--bg4); }
+  
+  /* images */
+  
+  div.thumb div { background:var(--bg3); border-color:var(--bg4); }
+  .thumbimage { border:0!important; }
+  .thumbcaption { color:var(--txt1); }
+  
+  /* search bars, input */
+
+  input, #p-search .pBody {
+    color:var(--txt1)!important;
+    background:var(--bg3)!important;
+  }
+
+  .mw-ui-input, .mw-ui-button {
+    color:var(--txt1)!important;
+    background:var(--bg3);
+    border-color:var(--bg4);
+    box-shadow:none!important;
+  }
+  
+  .mw-ui-input {
+    margin:1rem 0;
+  }
+  
+  .mw-ui-button:hover, .mw-ui-button:active, .mw-ui-button:focus {
+    color:var(--txt1);
+    background:var(--bg4);
+    border-color:var(--bg4);
+  }
+  
+  .suggestions, .suggestions-results, .suggestions-special {
+    background:var(--bg3);
+    border-color:var(--bg4);
+  }
+  
+  .suggestions-result,
+  .suggestions-special .special-label,
+  .suggestions a.mw-searchSuggest-link, .suggestions a.mw-searchSuggest-link:hover, .suggestions a.mw-searchSuggest-link:active, .suggestions a.mw-searchSuggest-link:focus,
+  .suggestions a.mw-searchSuggest-link .special-query {
+    color:var(--txt1);
+  }
+  
+  /* page actions */
+
+  #p-cactions > .pBody, #p-personal > .pBody { background:transparent; border:0; }
+  #p-cactions li { border:0!important; }
+  #p-cactions ul li a { padding:.25rem .8rem; color:var(--txt2); background:var(--bg1); }
+  #p-cactions ul li a:hover { background:var(--bg2); }
+  #p-cactions li.selected { border:0; }
+  #p-cactions ul li.selected a { background:var(--bg2); }
+  
+  /* homepage stuff */
+  
+  #uespMainLogo, #uespNewsDiv, #uespFADiv {
+    background:var(--bg3);
+    border-color:var(--bg4);
+  }
+    
+}
