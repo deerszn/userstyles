@@ -8,6 +8,6 @@ originally just a dark mode, but now has custom color palettes options.
 
 ### tumblr - [install](https://github.com/deerszn/userstyles/raw/main/tumblr/tumblr.user.css) / [userstyles.world](https://userstyles.world/style/10542/snk-tumblr)
 
-removes several kinds of links (such as post+ and the store), and adjusts some UI elements.
+removes several kinds of links (such as post+ and the store), and adjusts some UI elements. meant for use alongside [xkit rewritten](https://github.com/AprilSylph/XKit-Rewritten).
 
-meant for use alongside [xkit rewritten](https://github.com/AprilSylph/XKit-Rewritten) and [palettes for tumblr](https://github.com/AprilSylph/Palettes-for-Tumblr).
+the `.json` files in the same folder are custom color schemes that can be imported into [palettes for tumblr](https://github.com/AprilSylph/Palettes-for-Tumblr).
