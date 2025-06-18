@@ -1,11 +1,13 @@
+
+
 /* ==UserStyle==
 @name           [snk] uesp
-@namespace      snake <terrybogard.gay>
-@version        2.0
+@namespace      snake <playmoar.neocities.org>
+@version        2.1
 @license        GPL-3.0-or-later
 @preprocessor   stylus
 
-@var select theme "theme" ["custom*","nord","dracula"]
+@var select theme "theme" ["custom*","nord","dracula","gruvbox","ninety-five"]
 @var color colorBG1 "bg 1" #1b1820
 @var color colorBG2 "bg 2" #282A3A
 @var color colorBG3 "bg 3" #303347
@@ -67,6 +69,38 @@
       --blue:#8be9fd;
       --purple:#bd93f9;
       --accent:var(--purple);
+    }
+  }
+  
+  if theme == gruvbox {
+    :root {
+      --bg1:#1D2021;
+      --bg2:#282828;
+      --bg3:#32302F;
+      --bg4:#3C3836;
+      --txt1:#A89984;
+      --txt2:#D5C4A1;
+      --txt3:#FBF1C7;
+      --red:#FB4934;
+      --orange:#FE8019;
+      --yellow:#FABD2F;
+      --green:#8EC07C;
+      --blue:#458588;
+      --purple:#D3869B;
+      --accent:var(--orange);
+    }
+  }
+  
+  if theme == ninety-five {
+    :root {
+      --bg1:#008080;
+      --bg2:#c0c0c0;
+      --bg3:#c0c0c0;
+      --bg4:#808080;
+      --txt1:#000000;
+      --txt2:#111111;
+      --txt3:#222222;
+      --accent:#0000ff;
     }
   }
   
@@ -157,7 +191,10 @@
   }
 
   table.wikitable > tr > th,
-  table.wikitable > * > tr > th {
+  table.wikitable > * > tr > th,
+  .navbox th, .navbox-title,
+  .navbox-subgroup .navbox-group, .navbox-subgroup .navbox-abovebelow,
+  .navbox-abovebelow, th.navbox-group, .navbox-subgroup .navbox-title {
     background:var(--bg4);
     border-color:var(--bg3);
   }
@@ -180,7 +217,7 @@
     
   .navbox { border-color:var(--bg4); }
   .navbox, .navbox-subgroup { background:var(--bg3); }
-  .navbox-title, .navbox-group { background:var(--bg2); }
+  .navbox-title, .navbox-group { background:var(--bg2)!important; }
   .navbox-list { border-color:var(--bg4); }
   
   /* images */
@@ -223,6 +260,14 @@
   .suggestions a.mw-searchSuggest-link, .suggestions a.mw-searchSuggest-link:hover, .suggestions a.mw-searchSuggest-link:active, .suggestions a.mw-searchSuggest-link:focus,
   .suggestions a.mw-searchSuggest-link .special-query {
     color:var(--txt1);
+  }
+  
+  /* site notices */
+
+  .mw-parser-output div {
+    margin-bottom:1rem;
+    background:var(--bg3)!important;
+    border:0!important;
   }
   
   /* page actions */
